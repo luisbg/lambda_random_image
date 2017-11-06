@@ -3,13 +3,10 @@ Transform:
 - AWS::Serverless-2016-10-31
 - AWS::CodeStar
 
-Parameters:
-  ProjectId:
-    Type: String
-    Description: Return a random image from the ones contained in an S3 bucket
+Description: Return a random image from the ones contained in an S3 bucket
 
 Resources:
-  HelloWorld:
+  RandomImage:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
