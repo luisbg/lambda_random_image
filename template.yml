@@ -6,7 +6,7 @@ Transform:
 Parameters:
   ProjectId:
     Type: String
-    Description: CodeStar projectId used to associate new resources to team members
+    Description: Return a random image from the ones contained in an S3 bucket
 
 Resources:
   HelloWorld:
