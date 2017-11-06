@@ -3,6 +3,8 @@ import datetime
 
 
 def handler(event, context):
+    print("Handle event %s" % event)
+
     data = {
         'output': 'Hello World',
         'timestamp': datetime.datetime.utcnow().isoformat()
