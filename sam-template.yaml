@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: Return a random image from the ones contained in an S3 bucket
+Resources:
+  RandomImage:
+    Properties:
+      CodeUri: s3://<bucket>/index.py
+      Events:
+        GetEvent:
+          Type: Api
+          Properties:
+            Method: get
+            Path: /
+      Handler: index.handler
+      Runtime: python2.7
+    Type: AWS::Serverless::Function
