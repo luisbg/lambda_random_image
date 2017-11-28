@@ -13,4 +13,7 @@ Resources:
             Path: /
       Handler: index.handler
       Runtime: python2.7
+      Policies:
+      - S3ReadPolicy:
+          BucketName: <bucket>
     Type: AWS::Serverless::Function
